@@ -1,0 +1,35 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-main:rgba(160, 237, 210, 1);
+    --bg-LS:rgba(33, 123, 113, 1);
+}
+
+.title{
+    text-align: center;
+    color:  var(--bg-main);
+}
+
+.isi{
+    background-image:url(/assets/images/Background.PNG);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* Menambahkan properti ini */
+}
+
+.logo {
+    height: 2em;
+    display: inline;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 24px;
+    }
+}
