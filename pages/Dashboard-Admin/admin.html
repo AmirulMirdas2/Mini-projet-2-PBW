@@ -10,6 +10,11 @@
     <div class="container">
         <!-- Sidebar -->
         <div class="sidebar">
+            <button class="toggle-sidebar">
+                <img src="/assets/images/navbar/menu.svg" alt="Toggle Sidebar" class="toggle-icon">
+            </button>
+            
+            
             <div class="profile-section">
                 <div class="profile-img">
                     <img src="/assets/images/image/Firah.png" alt="Profile Image">
@@ -20,22 +25,25 @@
                 </div>
             </div>
             
-            <div class="sidebar-title">Tentang Kami</div>
+            <div class="sidebar-title"><b>Tentang Kami</b></div>
             
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#" class="nav-link active">
-                        <i><img src="/assets/images/navbar/home.svg"></i> Dashboard
+                        <i><img src="/assets/images/navbar/home.svg"></i>
+                        <span><b>Dashboard</b></span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i><img src="/assets/images/navbar/user.svg"></i> User
+                        <i><img src="/assets/images/navbar/user.svg"></i>
+                        <span><b>User</b></span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i>⚙️</i> Pengaturan
+                        <i><img src="/assets/images/navbar/setting.png" alt=""></i>
+                        <span><b>Pengaturan</b></span>
                     </a>
                 </li>
             </ul>
@@ -47,16 +55,15 @@
                 <h1 class="panel-title">Admin <span>Panel</span></h1>
                 
                 <div class="header-nav">
-                    <a href="#"><span>Dashboard</span></a>
-                    <a href="#">Add User</a>
-                    <a href="#">Profile</a>
+                    <a href="#"><span><b>Dashboard</b></span></a>
+                    <a href="#"><b>Add User</b></a>
+                    <a href="#"><b>Profile</b></a>
                 </div>
                 
                 <button class="menu-toggle">☰</button>
             </div>
             
             <div class="kotak">
-
                 <!-- Stats Cards -->
                 <div class="stats-container">
                     <div class="stat-card">
@@ -67,57 +74,58 @@
                         </div>
                     </div>
                     
-                <div class="stat-card">
-                    <h3 class="stat-title">New User</h3>
-                    <div class="stat-value">28</div>
-                    <div class="stat-subtitle">this month</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 45%;"></div>
+                    <div class="stat-card">
+                        <h3 class="stat-title">New User</h3>
+                        <div class="stat-value">28</div>
+                        <div class="stat-subtitle">this month</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3 class="stat-title">Activity Level</h3>
+                        <div class="stat-value">78%</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 78%;"></div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="stat-card">
-                    <h3 class="stat-title">Activity Level</h3>
-                    <div class="stat-value">78%</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 78%;"></div>
-                    </div>
+                <!-- Activity Section -->
+                <div class="activity-section">
+                    <h2 class="section-title">Recent Activity</h2>
+                    
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon icon-new-user"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">New user registers</h4>
+                                <p class="activity-time">5 minutes ago</p>
+                            </div>
+                        </li>
+                        
+                        <li class="activity-item">
+                            <div class="activity-icon icon-admin"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">Admin Changes the Rules</h4>
+                                <p class="activity-time">45 minutes ago</p>
+                            </div>
+                        </li>
+                        
+                        <li class="activity-item">
+                            <div class="activity-icon icon-system"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">System update successful</h4>
+                                <p class="activity-time">3 hours ago</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <!-- Activity Section -->
-            <div class="activity-section">
-                <h2 class="section-title">Recent Activity</h2>
-                
-                <ul class="activity-list">
-                    <li class="activity-item">
-                        <div class="activity-icon icon-new-user"></div>
-                        <div class="activity-content">
-                            <h4 class="activity-title">New user registers</h4>
-                            <p class="activity-time">5 minutes ago</p>
-                        </div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon icon-admin"></div>
-                        <div class="activity-content">
-                            <h4 class="activity-title">Admin Changes the Rules</h4>
-                            <p class="activity-time">45 minutes ago</p>
-                        </div>
-                    </li>
-                    
-                    <li class="activity-item">
-                        <div class="activity-icon icon-system"></div>
-                        <div class="activity-content">
-                            <h4 class="activity-title">System update successful</h4>
-                            <p class="activity-time">3 hours ago</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

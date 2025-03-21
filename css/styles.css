@@ -6,7 +6,6 @@
 }
 
 body {
-    /* Enhanced gradient background to match the images */
     background: radial-gradient(circle at 70% 30%, rgba(70, 252, 200, 0.8) 0%, rgba(24, 209, 160, 0.9) 40%, rgba(24, 90, 157, 0.8) 100%), 
                 linear-gradient(45deg, rgba(255, 236, 179, 0.3) 0%, rgba(67, 206, 162, 0.5) 50%, rgba(24, 90, 157, 0.4) 100%);
     background-attachment: fixed;
@@ -29,8 +28,32 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
     position: relative;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* Collapsed sidebar style */
+.sidebar.collapsed {
+    width: 80px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .profile-section,
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .profile-info,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+    padding: 15px 5px;
+}
+
+.sidebar.collapsed .nav-link i {
+    margin-right: 0;
 }
 
 .profile-section {
@@ -94,13 +117,25 @@ body {
     transition: all 0.3s;
 }
 
+.nav-link span {
+    margin-left: 10px;
+}
+
 .nav-link:hover, .nav-link.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 .nav-link i {
-    margin-right: 10px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-link i img {
+    width: 20px;
+    height: 20px;
 }
 
 .kotak{
@@ -109,11 +144,31 @@ body {
     border-radius: 30px;
 }
 
+/* Toggle button */
+.toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #3e866a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
 /* Main content styles */
 .main-content {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    transition: all 0.3s ease;
 }
 
 .main-header {
@@ -128,7 +183,6 @@ body {
     font-size: 24px;
     color: black;
 }
-
 
 .panel-title span {
     color: rgba(226, 218, 166, 1);
@@ -170,9 +224,9 @@ body {
     flex: 1;
     min-width: 200px;
     background-image: url(/assets/images/Rectangle\ 20.png);
-    background-size: cover; /* Changed from "100" to "cover" */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; /* Added this to center the image */
+    background-position: center;
     border-radius: 20px;
     padding: 25px;
     margin: 0 10px;
@@ -219,9 +273,9 @@ body {
     flex: 1;
     min-width: 200px;
     background-image: url(/assets/images/Rectangle\ 20.png);
-    background-size: cover; /* Changed from "100" to "cover" */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; /* Added this to center the image */
+    background-position: center;
     border-radius: 20px;
     padding: 25px;
     margin: 0 10px;
@@ -292,9 +346,8 @@ body {
 
 /* Responsive styles */
 @media (max-width: 992px) {
-    .sidebar {
+    .sidebar:not(.collapsed) {
         width: 240px;
-        box-shadow: 2px 2px 2px 2px rgba(100, 100, 100, 0.5);
     }
     
     .stats-container {
@@ -333,5 +386,9 @@ body {
     .stat-card {
         flex: 1 0 100%;
         margin: 0 0 20px 0;
+    }
+
+    .toggle-sidebar {
+        display: none;
     }
 }
