@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User - Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/add-user/styles.css">
+    <script src="/js/Add-user/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="/assets/images/image/Firah.png" alt="Profile Image">
+                </div>
+                <h3>Firah Maulida</h3>
+                <p>Firmann@admin.com</p>
+            </div>
+            
+            <div class="sidebar-title">Tentang Kami</div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="admin.html" class="nav-link">
+                        <img src="/assets/images/navbar/home.svg" alt="Home">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <img src="/assets/images/navbar/user.svg" alt="User">
+                        <span>User</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="/assets/images/navbar/setting.png" alt="Settings">
+                        <span>Pengaturan</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="title">Admin <span>Panel</span></div>
+                
+                <div class="nav">
+                    <a href="/pages/Dashboard-Admin/admin.html">Dashboard</a>
+                    <a href="#" class="active"><span>Add User</span></a>
+                    <a href="#">Profile</a>
+                </div>
+            </div>
+            
+            <div class="add-user-section">
+                <h2>Add User</h2>
+                
+                <div class="add-user-form">
+                    <div class="user-photo">
+                        <h3>User Photo</h3>
+                        <div class="photo-upload">
+                            <img src="default-user.jpg" alt="User Photo">
+                        </div>
+                        <button class="edit-photo">Edit Foto Profil</button>
+                    </div>
+                    
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Bunga Rasikah">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select id="role">
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                                <option value="moderator">Moderator</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="****************">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="aktif">Aktif</option>
+                                <option value="nonaktif">Nonaktif</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Bunga.keecee@gmail.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Masuk</label>
+                            <input type="text" id="tanggal" placeholder="17-Agustus-1945">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notelp">No. Telp</label>
+                            <input type="text" id="notelp" placeholder="0812789678900">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="add-button">Tambahkan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
