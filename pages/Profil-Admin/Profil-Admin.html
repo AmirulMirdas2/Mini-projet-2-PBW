@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - CuanFlow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            /* Enhanced gradient background to match the images */
+            background: radial-gradient(circle at 70% 30%, rgba(70, 252, 200, 0.8) 0%, rgba(24, 209, 160, 0.9) 40%, rgba(24, 90, 157, 0.8) 100%), 
+                        linear-gradient(45deg, rgba(255, 236, 179, 0.3) 0%, rgba(67, 206, 162, 0.5) 50%, rgba(24, 90, 157, 0.4) 100%);
+            background-attachment: fixed;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar styles */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 0 30px 30px 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 0 10px;
+        }
+        
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .logo h2 {
+            color: white;
+            font-size: 22px;
+        }
+        
+        .logo span {
+            color: #ffc107;
+        }
+        
+        .profile-small {
+            display: flex;
+            align-items: center;
+            padding: 15px 10px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-small img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid white;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .nav-item {
+            margin-bottom: 15px;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .nav-link i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        /* Main content styles */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header-title {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-title h1 {
+            color: #333;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .header-title span {
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .header-nav {
+            display: flex;
+        }
+        
+        .header-nav a {
+            margin-left: 25px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .header-nav a:hover::after, .header-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #2e7d6e;
+            border-radius: 3px;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        /* Banner section */
+        .banner-section {
+            height: 240px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 80px;
+            position: relative;
+        }
+        
+        .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Profile section on top of banner */
+        .profile-container {
+            position: relative;
+            margin-top: -160px;
+            padding: 0 30px;
+        }
+        
+        .profile-header {
+            display: flex;
+            margin-bottom: 40px;
+        }
+        
+        .profile-pic-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ffd86f, #fc6262);
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-info {
+            margin-left: 30px;
+            padding-top: 100px;
+        }
+        
+        .profile-info h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .profile-info .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-info .subtitle i {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+        
+        .profile-actions {
+            display: flex;
+            margin-top: 10px;
+        }
+        
+        .profile-btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #4cc2c0;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #f0f0f0;
+            color: #666;
+        }
+        
+        .profile-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        /* Profile details card */
+        .profile-details {
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            margin-bottom: 30px;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .detail-label {
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .detail-value {
+            font-size: 18px;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+        
+        .detail-value a {
+            color: #2e7d6e;
+            text-decoration: none;
+        }
+        
+        .edit-btn {
+            color: #4cc2c0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 240px;
+            }
+            
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-info {
+                margin-left: 0;
+                padding-top: 20px;
+            }
+            
+            .profile-actions {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-radius: 0 0 30px 30px;
+                display: none;
+            }
+            
+            .sidebar.show {
+                display: block;
+            }
+            
+            .main-content {
+                padding: 15px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .header-nav {
+                display: none;
+            }
+            
+            .banner-section {
+                height: 180px;
+                margin-bottom: 60px;
+            }
+            
+            .profile-container {
+                margin-top: -120px;
+                padding: 0 15px;
+            }
+            
+            .profile-pic-container {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/api/placeholder/80/30" alt="CuanFlow">
+                <h2>Cuan<span>Flow</span></h2>
+            </div>
+            
+            <div class="profile-small">
+                <img src="/api/placeholder/80/80" alt="Profile Image">
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i>🏠</i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i>👤</i> User
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i>👤</i> Profile
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i>⚙️</i> Pengaturan
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-title">
+                    <h1>Admin <span>Panel</span></h1>
+                </div>
+                
+                <div class="header-nav">
+                    <a href="#">Dashboard</a>
+                    <a href="#">Add User</a>
+                    <a href="#" class="active">Profile</a>
+                </div>
+                
+                <button class="menu-toggle">☰</button>
+            </div>
+            
+            <!-- Banner Section -->
+            <div class="banner-section">
+                <img src="/api/placeholder/1200/300" alt="Banner Image" class="banner-img">
+            </div>
+            
+            <!-- Profile Section -->
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-pic-container">
+                        <img src="/api/placeholder/200/200" alt="Firah Maulida" class="profile-pic">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Firah Maulida</h2>
+                        <p class="subtitle"><i>👤</i> Admin CuanFlow</p>
+                        <p class="subtitle"><i>📍</i> Banda Aceh, Langugob</p>
+                        <div class="profile-actions">
+                            <button class="profile-btn btn-primary">Change</button>
+                            <button class="profile-btn btn-secondary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Details -->
+                <div class="profile-details">
+                    <div class="detail-row">
+                        <div class="detail-label">Personal Meeting Id</div>
+                        <div class="detail-value">
+                            231-342-3245
+                            <a href="https://callme/231-342-3245">https://callme/231-342-3245</a>
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Email</div>
+                        <div class="detail-value">
+                            Firmann@admin.com
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Subscription Type</div>
+                        <div class="detail-value">
+                            Free Admin <a href="#">Access</a>
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Time Zone</div>
+                        <div class="detail-value">
+                            (UTC+7)Indonesia, Banda Aceh
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Language</div>
+                        <div class="detail-value">
+                            English
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-row">
+                        <div class="detail-label">Password</div>
+                        <div class="detail-value">
+                            ***********
+                            <button class="edit-btn">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

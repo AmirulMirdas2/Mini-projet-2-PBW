@@ -1,3 +1,6 @@
+// Simple toggle for mobile menu
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Dashboard loaded successfully!');
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    });
 });

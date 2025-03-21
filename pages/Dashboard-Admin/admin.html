@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="/assets/images/image/Firah.png" alt="Profile Image">
+                </div>
+                <div class="profile-info">
+                    <h3>Firah Maulida</h3>
+                    <p>Firmann@admin.com</p>
+                </div>
+            </div>
+            
+            <div class="sidebar-title">Tentang Kami</div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i><img src="/assets/images/navbar/home.svg"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i><img src="/assets/images/navbar/user.svg"></i> User
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i>⚙️</i> Pengaturan
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-header">
+                <h1 class="panel-title">Admin <span>Panel</span></h1>
+                
+                <div class="header-nav">
+                    <a href="#"><span>Dashboard</span></a>
+                    <a href="#">Add User</a>
+                    <a href="#">Profile</a>
+                </div>
+                
+                <button class="menu-toggle">☰</button>
+            </div>
+            
+            <div class="kotak">
+
+                <!-- Stats Cards -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3 class="stat-title">Users</h3>
+                        <div class="stat-value">128</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                <div class="stat-card">
+                    <h3 class="stat-title">New User</h3>
+                    <div class="stat-value">28</div>
+                    <div class="stat-subtitle">this month</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%;"></div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3 class="stat-title">Activity Level</h3>
+                    <div class="stat-value">78%</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 78%;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Activity Section -->
+            <div class="activity-section">
+                <h2 class="section-title">Recent Activity</h2>
+                
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon icon-new-user"></div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">New user registers</h4>
+                            <p class="activity-time">5 minutes ago</p>
+                        </div>
+                    </li>
+                    
+                    <li class="activity-item">
+                        <div class="activity-icon icon-admin"></div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Admin Changes the Rules</h4>
+                            <p class="activity-time">45 minutes ago</p>
+                        </div>
+                    </li>
+                    
+                    <li class="activity-item">
+                        <div class="activity-icon icon-system"></div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">System update successful</h4>
+                            <p class="activity-time">3 hours ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
