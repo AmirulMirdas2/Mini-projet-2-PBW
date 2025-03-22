@@ -16,30 +16,95 @@ body {
     min-height: 100vh;
 }
 
+.kotak{
+    padding: 50px;
+    background-color: rgba(165, 237, 211, 0.96);
+    border-radius: 30px;
+}
+
+/* Toggle button */
+.toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #3e866a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+
+
 /* Sidebar styles */
 .sidebar {
-    width: 230px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+    width: 280px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 30px 30px 0;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    height: 100vh;
-    left: 0;
-    top: 0;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+    padding: 10px;
+}
+
+.sidebar.collapsed .profile-container h3,
+.sidebar.collapsed .profile-container p,
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .profile-container {
+    padding: 10px;
+}
+
+.sidebar.collapsed .profile-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Adjust main content when sidebar is collapsed */
+.sidebar.collapsed + .main-content {
+    margin-left: 0;
+    width: calc(100% - 70px);
 }
 
 .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
     margin-bottom: 30px;
-    padding: 15px;
 }
 
+
+
 .profile-image {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid white;
@@ -53,27 +118,28 @@ body {
 }
 
 .sidebar-title {
-    font-weight: bold;
-    margin-bottom: 15px;
-    padding-left: 10px;
+    color: white;
+    margin: 15px 10px;
+    font-size: 16px;
 }
 
 .nav-menu {
     list-style: none;
+    margin-top: 10px;
 }
 
 .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 12px 15px;
+    border-radius: 50px;
     text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s;
+    color: white;
+    transition: all 0.3s;
 }
 
 .nav-link img {
@@ -89,16 +155,16 @@ body {
 /* Main content styles */
 .main-content {
     flex: 1;
-    margin-left: 230px;
     padding: 20px;
-}
+    overflow-y: auto;
+    transition: all 0.3s ease;
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-    padding-bottom: 10px;
+    padding: 10px 20px;
 }
 
 .title {
@@ -138,6 +204,7 @@ body {
 .add-user-section h2 {
     margin-bottom: 20px;
     font-size: 22px;
+    color: black;
 }
 
 .add-user-form {
@@ -146,10 +213,12 @@ body {
 }
 
 .user-photo {
-    width: 250px;
-    padding: 15px;
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 10px;
+    width: 280px;
+    padding: 20px;
+    background-color: rgba(33, 123, 113, 0.47);
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,6 +262,18 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+    flex: 1;
+    min-width: 200px;
+    background-color: rgba(71, 186, 169, 0.51);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .form-group label {
@@ -262,4 +343,5 @@ body {
     .main-content {
         margin-left: 70px;
     }
+}
 }

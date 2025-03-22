@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Toggle for mobile menu
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('.sidebar').classList.toggle('show');
-    });
+    const sidebar = document.querySelector('.sidebar');
+    const toggleButton = document.querySelector('.toggle-sidebar');
+    const icon = toggleButton.querySelector('.toggle-icon');
 
-    // Toggle for collapsing/expanding sidebar
-    document.querySelector('.toggle-sidebar').addEventListener('click', function() {
-        const sidebar = document.querySelector('.sidebar');
+    toggleButton.addEventListener('click', function() {
         sidebar.classList.toggle('collapsed');
 
-        // Ubah gambar tombol berdasarkan status sidebar
-        const icon = this.querySelector('.toggle-icon');
+        // Change icon image when sidebar is closed or opened
         if (sidebar.classList.contains('collapsed')) {
-            icon.src = '/assets/images/navbar/menu.svg'; // Gambar saat sidebar tertutup
+            icon.src = '/assets/images/navbar/menu.svg'; // Icon when sidebar is closed
         } else {
-            icon.src = '/assets/images/navbar/menu.svg'; // Gambar saat sidebar terbuka (gantilah dengan gambar yang sesuai)
+            icon.src = '/assets/images/navbar/menu.svg'; // Icon when sidebar is open
         }
     });
 });
