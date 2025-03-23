@@ -1,26 +1,20 @@
-document.getElementById("signupForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle for mobile menu
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    });
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value;
-    let repeatPassword = document.getElementById("repeatPassword").value;
-    let termsChecked = document.getElementById("terms").checked;
+    // Toggle for collapsing/expanding sidebar
+    document.querySelector('.toggle-sidebar').addEventListener('click', function() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('collapsed');
 
-    if (!name || !email || !password || !repeatPassword) {
-        alert("Please fill in all fields.");
-        return;
-    }
-
-    if (password !== repeatPassword) {
-        alert("Passwords do not match.");
-        return;
-    }
-
-    if (!termsChecked) {
-        alert("You must agree to the Terms of Service and Privacy Policy.");
-        return;
-    }
-
-    alert("Signup successful!");
+        // Ubah gambar tombol berdasarkan status sidebar
+        const icon = this.querySelector('.toggle-icon');
+        if (sidebar.classList.contains('collapsed')) {
+            icon.src = '/assets/images/navbar/menu.svg'; // Gambar saat sidebar tertutup
+        } else {
+            icon.src = '/assets/images/navbar/menu.svg'; // Gambar saat sidebar terbuka (gantilah dengan gambar yang sesuai)
+        }
+    });
 });
