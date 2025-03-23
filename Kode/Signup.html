@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuanFlow Signup</title>
+    <link rel="stylesheet" href="/Kode/signup.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-image flex items-center justify-center min-h-screen p-4">
+    <div class="relative bg-transparent p-6 max-w-4xl w-full flex items-center">
+        <img src="/CuanFlow/Asset/image/MacBook Air (15 inch).png " alt="Laptop" class="w-1/2">
+        <div class="bg-teal-700 p-8 rounded-lg shadow-lg text-white w-1/2 fade-in">
+            <h2 class="text-2xl font-bold text-center">Hello!<br>We are glad to see you :)</h2>
+            <div class="flex justify-center my-4">
+                <button class="flex items-center px-4 py-2 bg-white text-gray-800 rounded-lg shadow">
+                    <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google" class="w-6 h-6 mr-2"> Sign up with Google
+                </button>
+            </div>
+            <div class="flex justify-center space-x-4 my-4">
+                <button class="p-2 bg-gray-600 rounded-full text-white shadow-md">T</button>
+                <button class="p-2 bg-gray-600 rounded-full text-white shadow-md">F</button>
+            </div>
+            <p class="text-center text-white my-2">Or</p>
+            <form class="space-y-4" id="signupForm">
+                <div class="flex space-x-4">
+                    <input type="text" id="name" placeholder="Name" class="w-1/2 p-2 border rounded-lg text-gray-900">
+                    <input type="email" id="email" placeholder="Email Address" class="w-1/2 p-2 border rounded-lg text-gray-900">
+                </div>
+                <div class="flex space-x-4">
+                    <input type="password" id="password" placeholder="Password" class="w-1/2 p-2 border rounded-lg text-gray-900">
+                    <input type="password" id="repeatPassword" placeholder="Repeat Password" class="w-1/2 p-2 border rounded-lg text-gray-900">
+                </div>
+                <div class="flex items-center">
+                    <input type="checkbox" id="terms" class="mr-2">
+                    <label for="terms" class="text-white">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+                <button type="submit" class="w-full py-2 bg-green-300 text-gray-900 rounded-lg hover:bg-green-400 transition">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="/Kode/signup.js"></script>
+</body>
+</html>
