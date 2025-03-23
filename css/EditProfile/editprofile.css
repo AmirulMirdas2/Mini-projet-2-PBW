@@ -8,7 +8,7 @@
 
 /* Background Image */
 body {
-    background: url('/Mini-projet-2-PBW/Asset/image/Bggradasi.png') no-repeat center center fixed;
+    background: url('/assets/Background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     line-height: 1.6;
@@ -17,6 +17,11 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+}
+
+.bp{
+    color: white;
+    text-decoration: none;
 }
 
 /* Navbar Atas */

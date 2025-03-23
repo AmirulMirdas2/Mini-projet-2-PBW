@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/Mini-projet-2-PBW/Kode/CSS/User.css">
-    <script src="/Mini-projet-2-PBW/Kode/JS/User.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/List-user/User.css">
+    <script src="/js/List-user/User.js"></script>
 </head>
 <body>
     <div class="container">
@@ -28,19 +29,25 @@
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
-                        <i><img src="/assets/images/navbar/home.svg"></i>
+                    <a href="/pages/Dashboard-Admin/admin.html" class="nav-link">
+                        <i class="fas fa-home"></i>
                         <span><b>Dashboard</b></span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/pages/Add-user/index.html" class="nav-link">
-                        <i><img src="/assets/images/navbar/user.svg"></i>
-                        <span><b>User</b></span>
+                        <i class="fas fa-user"></i>
+                        <span><b>Add User</b></span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/pages/List-user/User.html" class="nav-link active">
+                        <i class="fas fa-user"></i>
+                        <span><b>List User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/pages/EditProfile/editprofile.html" class="nav-link">
                         <i><img src="/assets/images/navbar/setting.png" alt=""></i>
                         <span><b>Pengaturan</b></span>
                     </a>
@@ -54,7 +61,7 @@
                 <h1 class="panel-title">Admin <span>Panel</span></h1>
                 
                 <div class="header-nav">
-                    <a href="/pages/Landing-page/index.html"><b>Home</b></a>
+                    <a href="/index.html"><b>Home</b></a>
                 </div>
                 <button class="menu-toggle">☰</button>
             </div>
@@ -77,9 +84,11 @@
                                 </select>
                             </div>
                         </div>
+                        <a href="/pages/Add-user/index.html" class="add">
                         <button class="add-user-btn">
                             <span class="plus-icon">+</span>
-                            Add User
+                                Add User
+                            </a>
                         </button>
                     </div>
                     
