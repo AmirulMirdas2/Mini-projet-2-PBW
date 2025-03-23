@@ -27,6 +27,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }
 
     alert('Signup successful!');
+    window.location.href = '/index.html';
 });
 
 // Validasi real-time untuk field email

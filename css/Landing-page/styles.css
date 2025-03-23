@@ -58,6 +58,14 @@ nav {
     margin-right: 8px;
 }
 
+
+
+.ls{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
