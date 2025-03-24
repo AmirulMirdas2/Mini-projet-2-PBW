@@ -11,20 +11,18 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         return;
     }
     
-    // Validate email format and must be gmail
+    // Validate email format (must be gmail)
     if (!username.endsWith('@gmail.com')) {
         alert('Please use a Gmail account (@gmail.com)');
         return;
     }
     
-    // In a real application, you would send this data to a server for authentication
-    console.log('Login attempt:', { username, password });
-    
     // Accept any gmail account with any password (as long as password is not empty)
     if (username.endsWith('@gmail.com') && password) {
         alert('Login successful!');
-        // Redirect to dashboard or home page
-        window.location.href = '/index.html';
+            
+        window.location.href = "https://cs.usk.ac.id/~mhs/pbw_kelompok_6/index.html";
+
     } else {
         alert('Invalid username or password');
     }
