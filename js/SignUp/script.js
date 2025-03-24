@@ -27,7 +27,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     }
 
     alert('Signup successful!');
-    window.location.href = '/index.html';
+    window.location.href = "https://cs.usk.ac.id/~mhs/pbw_kelompok_6/index.html";
 });
 
 // Validasi real-time untuk field email
