@@ -339,7 +339,7 @@ nav {
 }
 
 .offering-card {
-    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-image: url('/assets/images/Rectangle\ 20.png');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -402,7 +402,7 @@ nav {
 
 .fitur-card {
     /* background-color: #e8f5f3; */
-    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-image: url('/assets/images/Rectangle\ 20.png');
     background-size: cover;
     background-position: center;
     border-radius: 35px;
