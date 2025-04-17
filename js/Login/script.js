@@ -12,18 +12,19 @@ document
       alert("Please enter both username and password");
       return;
     }
+// Validate email format (must be gmail)
+if (!username.endsWith('@gmail.com')) {
+    alert('Please use a Gmail account (@gmail.com)');
+    return;
+}
 
-    // Validate email format (must be gmail)
-    if (!username.endsWith("@gmail.com")) {
-      alert("Please use a Gmail account (@gmail.com)");
-      return;
-    }
+// Accept any gmail account with any password (as long as password is not empty)
+if (username.endsWith('@gmail.com') && password) {
+    alert('Login successful!');
+        
+    window.location.href = "https://cs.usk.ac.id/~mhs/pbw_kelompok_6/index.html";
+}
 
-    // Accept any gmail account with any password (as long as password is not empty)
-    if (username.endsWith("@gmail.com") && password) {
-      alert("Login successful!");
-
-      window.location.href = "../../index.html";
     } else {
       alert("Invalid username or password");
     }

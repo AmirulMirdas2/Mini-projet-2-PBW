@@ -8,7 +8,7 @@
 
 /* Background Image */
 body {
-    background: url('/assets/Background.png') no-repeat center center fixed;
+    background: url('https://cs.usk.ac.id/~mhs/pbw_kelompok_6/assets/Background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     line-height: 1.6;

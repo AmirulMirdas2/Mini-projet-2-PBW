@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.addEventListener("click", function () {
     sidebar.classList.toggle("collapsed");
 
-    // Change icon image when sidebar is closed or opened
-    if (sidebar.classList.contains("collapsed")) {
-      icon.src = "assets/images/navbar/menu.svg"; // Icon when sidebar is closed
-    } else {
-      icon.src = "assets/images/navbar/menu.svg"; // Icon when sidebar is open
-    }
-  });
+if (sidebar.classList.contains('collapsed')) {
+    icon.src = 'assets/images/navbar/menu.svg'; // Icon when sidebar is closed
+} else {
+    icon.src = 'assets/images/navbar/menu.svg'; // Icon when sidebar is open
+}
 });
