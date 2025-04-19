@@ -26,18 +26,21 @@ class SessionController extends Controller
             'password.required' => 'Password tidak boleh kosong', // Perbaikan di sini
         ]);
 
-        $infologin = [
+        $credentials = [
             'email' => $request->email,
             'password' => $request->password,
         ];
 
-        if (Auth::attempt($infologin)) {
-            // Jika autentikasi berhasil
-            return redirect('dashboard-admin')->with('success, berhasil login');
-        } else {
-            // Jika autentikasi gagal
-            return redirect('sesi')->withErrors('Username dan Password yang dimasukkan tidak valid');
+        if (Auth::attempt($credentials)) {
+            // Redirect berdasarkan role
+            $role = Auth::user()->role;
+            if ($role === 'admin') {
+                return redirect('/dashboard-admin')->with('success', 'Berhasil login sebagai admin');
+            } elseif ($role === 'user') {
+                return redirect('/dashboard-user')->with('success', 'Berhasil login sebagai user');
+            }
         }
+        return redirect('/sesi')->withErrors('Username dan Password yang dimasukkan tidak valid');
     }
 
     function logout()
@@ -73,6 +76,7 @@ class SessionController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password), // Hash password
+            'role' => 'user'
         ];
 
         User::create($data);

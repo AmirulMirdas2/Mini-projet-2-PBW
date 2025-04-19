@@ -1,15 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.querySelector(".sidebar");
-    const toggleButton = document.querySelector(".toggle-sidebar");
-    const icon = toggleButton.querySelector(".toggle-icon");
+document.getElementById("submitUser").addEventListener("click", function () {
+    const username = document.getElementById("username").value;
+    const role = document.getElementById("role").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
 
-    toggleButton.addEventListener("click", function () {
-        sidebar.classList.toggle("collapsed");
-
-        if (sidebar.classList.contains("collapsed")) {
-            icon.src = "assets/images/navbar/menu.svg"; // Icon when sidebar is closed
-        } else {
-            icon.src = "assets/images/navbar/menu.svg"; // Icon when sidebar is open
-        }
-    });
+    fetch("/api/add-user", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": "{{ csrf_token() }}",
+        },
+        body: JSON.stringify({ username, role, password, email }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.success) {
+                document.getElementById("successMessage").style.display =
+                    "block";
+                document.getElementById("addUserForm").reset();
+            } else {
+                alert("Gagal mendaftarkan user.");
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("Terjadi kesalahan.");
+        });
 });

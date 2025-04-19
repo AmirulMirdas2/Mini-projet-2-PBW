@@ -25,8 +25,12 @@
                 <img src="assets/Mirul.png" alt="Profile" />
             </div>
             <div class="profile-info">
-                <div class="name">Amirul Mirdas</div>
-                <div class="email">Amirrdass.23@gmail.com</div>
+                <div class="name">
+                    <p>{{ Auth::user()->name }}</p>
+                </div>
+                <div class="email">
+                    <p>{{ Auth::user()->email }}</p>
+                </div>
             </div>
         </div>
 
@@ -34,7 +38,7 @@
 
         <!-- Updated Navigation Menu -->
         <div class="nav-container">
-            <a href="/" class="nav-item">
+            <a href="dashboard-user" class="nav-item">
                 <i class="fas fa-home"></i>
                 <span>Dashboard</span>
             </a>
@@ -45,10 +49,6 @@
             <a href="#" class="nav-item active">
                 <i class="fas fa-lightbulb"></i>
                 <span>Tips & Trik</span>
-            </a>
-            <a href="setting" class="nav-item">
-                <i class="fas fa-user"></i>
-                <span>Ubah Profil</span>
             </a>
             <a href="setting" class="nav-item">
                 <i class="fas fa-cog"></i>
@@ -68,15 +68,8 @@
                 <h1>Cuan <span>Flow</span></h1>
             </div>
             <div class="user-info">
-                <div class="notifications">
-                    <i class="fas fa-bell"></i>
-                    <span class="badge">3</span>
-                </div>
-                <div class="user">
-                    <span>Maret 2025</span>
-                </div>
-                <div class="user">
-                    <a href="/" class="nav-item"><span>Home</span></a>
+                <div class="header-nav">
+                    <a href="/sesi"><b>Logout</b></a>
                 </div>
             </div>
         </div>
@@ -165,8 +158,7 @@
                     <!-- Video Card 5 -->
                     <div class="video-card" data-video-id="qbgcFocUDVw">
                         <img src="https://img.youtube.com/vi/qbgcFocUDVw/maxresdefault.jpg" alt="Tips Kelola Keuangan"
-                            class="video-thumbnail"
-                            onerror="this.src='https://img.youtube.com/vi/qbgcFocUDVw/0.jpg'" />
+                            class="video-thumbnail" onerror="this.src='https://img.youtube.com/vi/qbgcFocUDVw/0.jpg'" />
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>

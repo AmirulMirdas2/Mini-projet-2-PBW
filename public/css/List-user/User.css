@@ -313,6 +313,41 @@ body {
 
 .table-header {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+}
+
+.table-header-row {
+    font-weight: bold;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: red;
+    /* color: white; */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.table-header {
+    display: flex;
     padding: 15px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-weight: bold;
@@ -407,12 +442,12 @@ body {
     border: none;
     font-size: 20px;
     cursor: pointer;
-    color: #666;
+    color: black;
     transition: all 0.3s;
 }
 
 .delete-btn:hover {
-    color: #ff4c4c;
+    color: red;
 }
 
 /* Checkbox styling */

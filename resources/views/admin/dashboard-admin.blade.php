@@ -23,8 +23,14 @@
                     <img src="/assets/Firah.png" alt="Profile Image" />
                 </div>
                 <div class="profile-info">
-                    <h3>Firah Maulida</h3>
-                    <p>Firmann@admin.com</p>
+                    @if (Auth::check())
+                        <b>
+                            <p>{{ Auth::user()->name }}</p>
+                        </b>
+                        <b>
+                            <p>{{ Auth::user()->email }}</p>
+                        </b>
+                    @endif
                 </div>
             </div>
 
@@ -44,15 +50,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="list-user" class="nav-link">
+                    <a href="{{ route('list-user') }}" class="nav-link">
                         <i class="fas fa-user"></i>
                         <span><b>List User</b></span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/pages/ProfileAdmin/ProfileAdmin.html" class="nav-link">
-                        <i><img src="/assets/setting.png" alt="" /></i>
-                        <span><b>Pengaturan</b></span>
                     </a>
                 </li>
             </ul>
@@ -66,7 +66,6 @@
                 <div class="header-nav">
                     <a href="/sesi"><b>Logout</b></a>
                 </div>
-                <button class="menu-toggle">☰</button>
             </div>
 
             <div class="kotak">

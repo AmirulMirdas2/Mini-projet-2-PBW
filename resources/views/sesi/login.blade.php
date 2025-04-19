@@ -42,7 +42,7 @@
             @endif
 
             <form id="login-form" method="POST" action="/sesi">
-                @csrf <!-- Menambahkan token CSRF -->
+                @csrf
                 <div class="form-group full-width">
                     <label for="username">Email</label>
                     <input type="email" value="{{ Session::get('email') }}" name="email" class="form-input"

@@ -167,6 +167,19 @@ body {
     padding: 10px 20px;
 }
 
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
 .title {
     font-size: 24px;
     font-weight: bold;
@@ -198,6 +211,7 @@ body {
 
 /* Add User specific styles */
 .add-user-section {
+    text-align: center;
     padding: 20px;
 }
 
@@ -208,7 +222,8 @@ body {
 }
 
 .add-user-form {
-    display: flex;
+    text-align: center;
+    /* display: flex; */
     gap: 30px;
 }
 

@@ -35,7 +35,7 @@
                 </div>
             </div>
             <form id="login-form" method="POST" action="/sesi/create">
-                @csrf <!-- Menambahkan token CSRF -->
+                @csrf
                 <div class="form-group full-width">
                     <label for="name">name</label>
                     <input type="text" value="{{ Session::get('name') }}" name="name" class="form-input" required>
