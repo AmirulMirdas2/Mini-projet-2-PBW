@@ -16,10 +16,6 @@
                 <div class="logo">
                     <img src="assets/logo-website.png" alt="CuanFlow Logo"> CuanFlow
                 </div>
-                <div class="nav-links">
-                    <a href="dashboard-admin"><b>Admin</b></a>
-                    <a href="dashboard-user"><b>User</b></a>
-                </div>
                 <div class="toggle-container">
                     <div class="toggle-option"><a href ="sesi" class="ls">Masuk</a></div>
                     <div class="toggle-option toggle-active"><a href ="/sesi/register" class="ls">Daftar</a></div>
