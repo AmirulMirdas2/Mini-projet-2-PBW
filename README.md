@@ -25,10 +25,24 @@ CuanFlow adalah sebuah aplikasi web yang dirancang untuk membantu pengguna menge
 2.Dashboard Admin: Menyajikan statistik umum terkait penggunaan aplikasi, seperti jumlah pengguna aktif, total transaksi, dll. (sesuai kebutuhan).
 
 🧰 Teknologi yang Digunakan
-Frontend:  HTML, CSS, JavaScript
-Backend:  PHP (Laravel)
-Database: MySQL
+*Frontend*:  HTML, CSS, JavaScript
+*Backend*:  PHP (Laravel)
+*Database*: MySQL
 
+📁 Struktur Kode (Gambaran Umum Laravel)
+*Controllers*: Logika utama aplikasi berada di app/Http/Controllers/. Ada subfolder seperti User/ dan Admin/ untuk memisahkan controller berdasarkan peran.
+*Models*: Interaksi dengan database (MySQL) dilakukan melalui Eloquent Models di app/Models/ (misalnya User.php, Transaction.php, Tip.php).
+*Views*: Tampilan antarmuka pengguna (HTML) menggunakan Blade templating engine dan terletak di resources/views/. Biasanya terstruktur dalam folder user/, admin/, dan layouts/.
+*Routes*: Definisi URL dan pemetaannya ke controller ada di routes/web.php.
+*Migrations*: Skema database didefinisikan dan dikelola melalui file migrasi di database/migrations/.
+*Assets*: File CSS dan JavaScript frontend berada di public/ atau dikelola melalui resources/js dan resources/css yang kemudian di-compile ke public/ menggunakan npm run dev.
+
+🧰 Teknologi yang Digunakan
+Frontend: HTML, CSS, JavaScript (Kode frontend ini ditulis langsung atau dibantu oleh library/framework kecil dan terintegrasi dalam file Blade atau file aset di resources/js dan resources/css.)
+Backend: PHP (Laravel Framework) (Inti dari aplikasi, menangani routing, logika bisnis, interaksi database, autentikasi, dll.)
+Database: MySQL (Tempat penyimpanan semua data persisten aplikasi, seperti data pengguna, transaksi, tips, dll.)
+⚙️ Cara Menjalankan Aplikasi
+Clone Repositori:
 ⚙ Cara Menjalankan Aplikasi (Contoh)
 1. Clone repositori
 - git clone https://github.com/AmirulMirdas2/Mini-projet-2-PBW.git
@@ -62,7 +76,7 @@ Kami sangat terbuka untuk saran, laporan bug, dan kontribusi untuk pengembangan 
 5. Buat Pull Request baru.
 
 👥 Tim Pengembang
-1. Amirul Mirdas - 23081071010070 (Dashboard dan Admin Page)
-2. Bunga Rasikhah haya - 2308107010010 (Ubah Profil dan User Page)
-3. Firah Maulida - 2308107010034 (Tips & Trik dan User Page)
-4. Razian Sabri - 2308107010050 (Login Page dan Register Page)
+1. *Amirul Mirdas* - 23081071010070 (Dashboard dan Admin Page)
+2. *Bunga Rasikhah haya* - 2308107010010 (Ubah Profil dan User Page)
+3. *Firah Maulida* - 2308107010034 (Tips & Trik dan User Page)
+4. *Razian Sabri* - 2308107010050 (Login Page dan Register Page)
