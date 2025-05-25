@@ -1,4 +1,5 @@
 💸 CuanFlow
+
 CuanFlow adalah sebuah aplikasi web yang dirancang untuk membantu pengguna mengelola keuangan pribadi mereka dengan cara yang praktis dan efisien. Aplikasi ini menyediakan berbagai fitur mulai dari pencatatan transaksi, visualisasi data keuangan, hingga tips finansial yang bermanfaat.
 
 🚀 Fitur Utama
@@ -48,16 +49,17 @@ Database: MySQL
 - php artisan serve
 
 📌 Catatan Tambahan
-Aplikasi ini ditujukan untuk individu yang ingin memiliki kontrol lebih baik atas keuangan pribadi mereka, mulai dari pelajar, mahasiswa, hingga profesional.
-Dirancang dengan antarmuka pengguna yang intuitif dan diharapkan mobile-friendly.
+- Aplikasi ini ditujukan untuk individu yang ingin memiliki kontrol lebih baik atas keuangan pribadi mereka, mulai dari pelajar, mahasiswa, hingga profesional.
+- Dirancang dengan antarmuka pengguna yang intuitif dan diharapkan mobile-friendly.
 
 🤝 Kontribusi
+
 Kami sangat terbuka untuk saran, laporan bug, dan kontribusi untuk pengembangan fitur baru. Jika Anda ingin berkontribusi:
-Fork repository ini.
-Buat branch baru untuk fitur atau perbaikan Anda (git checkout -b fitur/NamaFiturAnda atau fix/DeskripsiPerbaikan).
-Lakukan perubahan dan commit (git commit -am 'Menambahkan fitur X').
-Push ke branch Anda (git push origin fitur/NamaFiturAnda).
-Buat Pull Request baru.
+1. Fork repository ini.
+2. Buat branch baru untuk fitur atau perbaikan Anda (git checkout -b fitur/NamaFiturAnda atau fix/DeskripsiPerbaikan).
+3. Lakukan perubahan dan commit (git commit -am 'Menambahkan fitur X').
+4. Push ke branch Anda (git push origin fitur/NamaFiturAnda).
+5. Buat Pull Request baru.
 
 👥 Tim Pengembang
 1. Amirul Mirdas - 23081071010070 (Dashboard dan Admin Page)
