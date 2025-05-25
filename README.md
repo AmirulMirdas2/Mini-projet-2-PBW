@@ -60,7 +60,7 @@ Push ke branch Anda (git push origin fitur/NamaFiturAnda).
 Buat Pull Request baru.
 
 👥 Tim Pengembang
-Amirul Mirdas - 23081071010070 (Dashboard dan Admin Page)
-Bunga Rasikhah haya - 2308107010010 (Ubah Profil dan User Page)
-Firah Maulida - 2308107010034 (Tips & Trik dan User Page)
-Razian Sabri - 2308107010050 (Login Page dan Register Page)
+1. Amirul Mirdas - 23081071010070 (Dashboard dan Admin Page)
+2. Bunga Rasikhah haya - 2308107010010 (Ubah Profil dan User Page)
+3. Firah Maulida - 2308107010034 (Tips & Trik dan User Page)
+4. Razian Sabri - 2308107010050 (Login Page dan Register Page)
