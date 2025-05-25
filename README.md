@@ -2,26 +2,26 @@
 CuanFlow adalah sebuah aplikasi web yang dirancang untuk membantu pengguna mengelola keuangan pribadi mereka dengan cara yang praktis dan efisien. Aplikasi ini menyediakan berbagai fitur mulai dari pencatatan transaksi, visualisasi data keuangan, hingga tips finansial yang bermanfaat.
 
 🚀 Fitur Utama
+
 👤 Halaman Pengguna (User)
-Dashboard: Menampilkan ringkasan visual keuangan pengguna secara real-time, termasuk:
-Total Pemasukan
-Total Pengeluaran
-Saldo Terkini
-Kalender Keuangan: Visualisasi transaksi (pemasukan dan pengeluaran) dalam format kalender, memudahkan pengguna untuk melacak aktivitas keuangan berdasarkan tanggal.
-Catatan Keuangan: Fitur untuk mencatat detail setiap pemasukan dan pengeluaran, meliputi jumlah, kategori, tanggal, dan deskripsi.
-Ringkasan Keuangan:
-Rekapitulasi Jumlah Pemasukan dalam periode tertentu.
-Rekapitulasi Jumlah Pengeluaran dalam periode tertentu.
-Informasi Saldo Akhir yang jelas.
-Tips & Trik: Kumpulan artikel, saran, dan strategi mengenai pengelolaan keuangan yang bijak, cara berhemat, investasi dasar, dan topik finansial relevan lainnya untuk meningkatkan literasi keuangan pengguna.
+1. Dashboard: Menampilkan ringkasan visual keuangan pengguna secara real-time, termasuk:
+- Total Pemasukan
+- Total Pengeluaran
+- Saldo Terkini
+2. Kalender Keuangan: Visualisasi transaksi (pemasukan dan pengeluaran) dalam format kalender, memudahkan pengguna untuk melacak aktivitas keuangan berdasarkan tanggal.
+3. Catatan Keuangan: Fitur untuk mencatat detail setiap pemasukan dan pengeluaran, meliputi jumlah, kategori, tanggal, dan deskripsi.
+4. Ringkasan Keuangan:
+- Rekapitulasi Jumlah Pemasukan dalam periode tertentu.
+- Rekapitulasi Jumlah Pengeluaran dalam periode tertentu.
+- Informasi Saldo Akhir yang jelas.
+5. Tips & Trik: Kumpulan artikel, saran, dan strategi mengenai pengelolaan keuangan yang bijak, cara berhemat, investasi dasar, dan topik finansial relevan lainnya untuk meningkatkan literasi keuangan pengguna.
+
 🛠 Halaman Admin
-Manajemen Pengguna:
-Melihat daftar semua pengguna yang terdaftar.
-Mengelola akun pengguna (misalnya, aktivasi, deaktivasi, edit detail dasar).
-Menghapus akun pengguna jika diperlukan.
-Manajemen Konten (Tips & Trik):
-Menambah, mengedit, dan menghapus artikel atau konten tips & trik yang akan ditampilkan di halaman pengguna.
-Dashboard Admin: Menyajikan statistik umum terkait penggunaan aplikasi, seperti jumlah pengguna aktif, total transaksi, dll. (sesuai kebutuhan).
+1.Manajemen Pengguna:
+- Melihat daftar semua pengguna yang terdaftar.
+- Mengelola akun pengguna (misalnya, aktivasi, deaktivasi, edit detail dasar).
+- Menghapus akun pengguna jika diperlukan.
+2.Dashboard Admin: Menyajikan statistik umum terkait penggunaan aplikasi, seperti jumlah pengguna aktif, total transaksi, dll. (sesuai kebutuhan).
 
 🧰 Teknologi yang Digunakan
 Frontend:  HTML, CSS, JavaScript
