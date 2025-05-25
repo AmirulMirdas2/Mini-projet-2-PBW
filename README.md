@@ -3,6 +3,7 @@
 CuanFlow adalah aplikasi web yang dirancang untuk memberdayakan pengguna dalam mengelola keuangan pribadi secara praktis dan efisien. Dengan antarmuka yang intuitif, CuanFlow menyediakan beragam fitur mulai dari pencatatan transaksi harian, visualisasi data keuangan melalui kalender, hingga akses ke tips dan trik finansial yang relevan.
 
 🚀 Fitur Utama
+
 👤 Halaman Pengguna (User)
 
 1. Dashboard Pengguna: Menyajikan ringkasan visual kondisi keuangan pengguna secara real-time, meliputi:
@@ -84,8 +85,6 @@ CuanFlow adalah aplikasi web yang dirancang untuk memberdayakan pengguna dalam m
 Package Manager: Composer (untuk PHP), NPM (untuk JavaScript)
 
 ⚙ Cara Menjalankan Aplikasi
-Clone Repositori:
-⚙ Cara Menjalankan Aplikasi (Contoh)
 1. Clone repositori
 - git clone https://github.com/AmirulMirdas2/Mini-projet-2-PBW.git
 - cd Mini-projet-2-PBW
